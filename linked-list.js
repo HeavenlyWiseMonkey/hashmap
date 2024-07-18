@@ -126,6 +126,9 @@ class LinkedList {
     removeAt(index) {
         let point = this.head;
         if (index===0) {
+            if (this.head === this.tail) {
+                this.tail = null;
+            }
             this.head = this.head.next;
             return;
         }
